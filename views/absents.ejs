@@ -1,0 +1,28 @@
+<%- include('header') -%>
+
+<div class="container">
+  <div class="date">
+    <span> <%= today %> </span>
+  </div>
+  
+  <div class="list-box">
+    <h3 class="workers-status absent">Absent Workers</h3>
+    <% if(workersAbsentList.length <= 0){ %>
+      <p class="empty-list-msg">This List Is Empty. </p>
+    <% } %>
+    <% for(let i=0; i< workersAbsentList.length; i++){ %>
+    <div class="list-item">
+      <input type="checkbox" />
+      <span class="worker-name"> <%= workersAbsentList[i] %> </span>
+    </div>
+    <% } %>
+  </div>
+
+  <form class="list-form" action="/absents" method="post">
+    <input type="text" name="workerName" placeholder="Worker Name" />
+    <button type="submit" name="absents" value="absents" >+</button>
+  </form>
+  <a class="switch-pages-link" href="/" >Go to Presents List</a>
+</div>
+
+<%- include('footer') -%>

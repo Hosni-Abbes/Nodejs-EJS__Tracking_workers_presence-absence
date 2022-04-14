@@ -1,0 +1,130 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* background-image: -webkit-linear-gradient(60deg, #8D8DAA 30%, #DFDFDE 30% ); */
+  /* min-height: 100vh; */
+  background-color: #DFDFDE;
+}
+
+.container{
+  margin: 50px auto;
+  width: 300px;
+}
+.date{
+  background-color: #8d8daa;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.list-box{
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 10px 0;
+  max-height: 330px;
+  min-height: 330px;
+  overflow-y: scroll;
+  position: relative;
+}
+.workers-status{
+  text-align: center;
+  font-size: 1rem;
+}
+.workers-status.absent{
+  color: #f44336;
+}
+.workers-status.present{
+  color: #43a047;
+}
+.empty-list-msg{
+  font-weight: 200;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.list-item{
+  border-bottom: 1px solid #DFDFDE;
+  padding: 10px;
+  word-break: break-all;
+}
+.list-item:last-child{
+  border-bottom: none;
+}
+.list-item:hover{
+  background-color: #DFDFDE;
+}
+.list-item input[type='checkbox']:checked+.worker-name{
+  text-decoration: line-through;
+}
+.worker-name{
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+
+
+.list-form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-form input{
+  padding: 10px;
+  border: 1px solid #8d8daa;
+  border-radius: 8px;
+  width: 85%;
+}
+.list-form button{
+  width: calc(15% - 6px);
+  border-radius: 50%;
+  background-color: #8d8daa;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.list-form input:focus,
+.list-form button{
+  outline: none;
+}
+
+.switch-pages-link{
+  background-color: #8d8daa;
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 6px;
+}
+
+.copyrigth{
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #555;
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+::-webkit-scrollbar{
+  width: 3px;
+}
+::-webkit-scrollbar-button{
+  background-attachment: scroll;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #8d8daa;
+}
